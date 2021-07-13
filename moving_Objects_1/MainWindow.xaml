@@ -22,7 +22,7 @@
         <Button Content="Abbruch" x:Name ="Cancel"  HorizontalAlignment="Left" Margin="68,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Grid.Column="1" Click="Cancel_Click"/>
         <Label x:Name="RadiusText" Content="Gebe den Radius in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <Label x:Name ="BreiteText" Content="Gebe die Laenge und Breite in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Visibility="Hidden"/>
-        <Label x:Name="AnzahlText" Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Label x:Name="AnzahlText" Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <Image x:Name="RechteckBild" Margin="30,150,699,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Source="/Rechteck1.png" MouseLeftButtonDown="Rectangleclick"/>
         <Image x:Name ="KreisBild" Margin="30,190,699,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Source="/Kreis3.png" MouseLeftButtonDown="Mouseclick_Circle"/>
 

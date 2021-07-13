@@ -56,7 +56,7 @@ namespace moving_Objects_1
             }
         }
         /// <summary>
-        /// erstellung der objecte.
+        /// Erstellung der Kreis-Objekte
         /// num als Anzahl der zu erstellenden Objecte.
         /// Es werden objecte von der Klasse MovingCircle erstellt und diese dann in einer Liste gespeichert.
         /// </summary>
@@ -79,7 +79,13 @@ namespace moving_Objects_1
                 
             }
         }
-
+        /// <summary>
+        /// Erstellung der Viereck-Objekte.
+        /// Es werden Objekte der Klasse MovingRectangle erstellt und diese in einer Liste gespeichert.
+        /// </summary>
+        /// <param name="height"></param>
+        /// <param name="length"></param>
+        /// <param name="num"></param>
         public void initRectangle(int height, int length, int num)
         {
             for(int i=0; i< num; i++)
