@@ -17,7 +17,7 @@
         <TextBox Name="RadiusEingabe" HorizontalAlignment="Left" Height="20" Margin="30,151,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
         <TextBox Name="AnzahlEingabe" HorizontalAlignment="Left" Height="20" Margin="30,216,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
         <Button Content="Weiter" x:Name ="Next"  HorizontalAlignment="Left" Margin="30,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="Next_Click" Grid.ColumnSpan="2"/>
-        <Button Content="Abbruch" x:Name ="Cancel"  HorizontalAlignment="Left" Margin="68,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="StartStop_Click" Grid.Column="1"/>
+        <Button Content="Abbruch" x:Name ="Cancel"  HorizontalAlignment="Left" Margin="68,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Grid.Column="1" Click="Cancel_Click"/>
         <Label Content="Gebe den Radius in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
     </Grid>

@@ -134,5 +134,11 @@ namespace moving_Objects_1
             moveAll();
             drawAll();
         }
+
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
