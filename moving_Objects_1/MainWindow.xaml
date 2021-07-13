@@ -14,11 +14,18 @@
         <Canvas Margin="305,0,0,0" Name ="GamingArea" Background="#F9F2E7" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="1"/>
         <Button Content="Start/Stop" Name ="StartStop"  HorizontalAlignment="Left" Margin="5,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="StartStop_Click" Visibility="Hidden" Grid.Column="1"/>
         <Button Content="Step" Name ="Step"  HorizontalAlignment="Left" Margin="238,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="Step_Click" Visibility="Visible" Grid.Column="1"/>
-        <TextBox Name="RadiusEingabe" HorizontalAlignment="Left" Height="20" Margin="30,151,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
-        <TextBox Name="AnzahlEingabe" HorizontalAlignment="Left" Height="20" Margin="30,216,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <TextBox Name="RadiusEingabe" HorizontalAlignment="Left" Height="20" Margin="30,151,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <TextBox Name="AnzahlEingabe" HorizontalAlignment="Left" Height="20" Margin="30,216,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <TextBox Name ="LaengeEingabe" HorizontalAlignment="Left" Height="20" Margin="30, 151,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <TextBox Name ="BreiteEingabe" HorizontalAlignment="Left" Height="20" Margin="150, 151,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <Button Content="Weiter" x:Name ="Next"  HorizontalAlignment="Left" Margin="30,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="Next_Click" Grid.ColumnSpan="2"/>
         <Button Content="Abbruch" x:Name ="Cancel"  HorizontalAlignment="Left" Margin="68,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Grid.Column="1" Click="Cancel_Click"/>
-        <Label Content="Gebe den Radius in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="RadiusText" Content="Gebe den Radius in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Label x:Name ="BreiteText" Content="Gebe die Laenge und Breite in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Label x:Name="AnzahlText" Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <Image x:Name="RechteckBild" Margin="30,150,699,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Source="/Rechteck1.png" MouseLeftButtonDown="Rectangleclick"/>
+        <Image x:Name ="KreisBild" Margin="30,190,699,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Source="/Kreis3.png" MouseLeftButtonDown="Mouseclick_Circle"/>
+
+
     </Grid>
 </Window>

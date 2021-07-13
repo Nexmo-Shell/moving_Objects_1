@@ -6,4 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Kreis3.png" />
+    <None Remove="Rechteck1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Kreis3.png" />
+    <Resource Include="Rechteck1.png" />
+  </ItemGroup>
+
 </Project>

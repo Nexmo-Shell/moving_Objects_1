@@ -79,6 +79,24 @@ namespace moving_Objects_1
                 
             }
         }
+
+        public void initRectangle(int height, int length, int num)
+        {
+            for(int i=0; i< num; i++)
+            {
+                MovingRectangle rec = new MovingRectangle();
+                rec.color = new SolidColorBrush(Color.FromRgb((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255)));
+                rec.height = height;
+                rec.length = length;
+                rec.X = r.Next(0, (int)GamingArea.ActualWidth);
+                rec.Y = r.Next(0, (int)GamingArea.ActualHeight);
+
+                rec.velocity = r.Next(1, 20);
+                rec.directionup = r.Next(2) == 0;
+                movingDots.Add(rec);
+
+            }
+        }
         /// <summary>
         /// Ruft einen Dispatcher auf. Dies ist notwendig, da das geschehen innerhalb von einem Thread stattfindet. Die änderung aber außerhalb des Threads stattfinden sollen.
         /// </summary>
@@ -122,9 +140,19 @@ namespace moving_Objects_1
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            int radius = int.Parse(RadiusEingabe.Text);
+           
+           
             int num = int.Parse(AnzahlEingabe.Text);
-            initDots(radius, num);
+            if (RadiusText.Visibility == Visibility.Visible)
+            {
+                int radius = int.Parse(RadiusEingabe.Text);
+                initDots(radius, num); }
+            else
+            {
+                int height = int.Parse(BreiteEingabe.Text);
+                int length = int.Parse(LaengeEingabe.Text);
+                initRectangle(length, height, num); 
+            }
             StartStop.Visibility = Visibility.Visible;
             drawAll();
         }
@@ -138,7 +166,43 @@ namespace moving_Objects_1
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            RadiusText.Visibility = Visibility.Hidden;
+            RadiusEingabe.Visibility = Visibility.Hidden;
+            AnzahlText.Visibility = Visibility.Hidden;
+            AnzahlEingabe.Visibility = Visibility.Hidden;
+            BreiteEingabe.Visibility = Visibility.Hidden;
+            LaengeEingabe.Visibility = Visibility.Hidden;
+            BreiteText.Visibility = Visibility.Hidden;
+            AnzahlEingabe.Text = "";
+            BreiteEingabe.Text = "";
+            LaengeEingabe.Text = "";
+            RadiusEingabe.Text = "";
+            RechteckBild.Visibility = Visibility.Visible;
+            KreisBild.Visibility = Visibility.Visible;
+            GamingArea.Children.Clear();
+            movingDots.Clear();
+        }
+
+
+        private void Mouseclick_Circle(object sender, MouseButtonEventArgs e)
+        {
+            RadiusText.Visibility = Visibility.Visible;
+            RadiusEingabe.Visibility = Visibility.Visible;
+            AnzahlText.Visibility = Visibility.Visible;
+            AnzahlEingabe.Visibility = Visibility.Visible;
+            RechteckBild.Visibility = Visibility.Hidden;
+            KreisBild.Visibility = Visibility.Hidden;
+        }
+
+        private void Rectangleclick(object sender, MouseButtonEventArgs e)
+        {
+            AnzahlText.Visibility = Visibility.Visible;
+            BreiteEingabe.Visibility = Visibility.Visible;
+            LaengeEingabe.Visibility = Visibility.Visible;
+            AnzahlEingabe.Visibility = Visibility.Visible;
+            BreiteText.Visibility = Visibility.Visible;
+            RechteckBild.Visibility = Visibility.Hidden;
+            KreisBild.Visibility = Visibility.Hidden;
         }
     }
 }

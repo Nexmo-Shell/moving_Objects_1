@@ -14,7 +14,7 @@ namespace moving_Objects_1
         public double X { get; set; }
         public int length { get; set; }
         public int height { get; set; }
-        public bool directionUp { get; set; }
+        public bool directionup { get; set; }
         public double velocity { get; set; }
         public SolidColorBrush color { get; set; }
 
@@ -33,7 +33,12 @@ namespace moving_Objects_1
 
         public void move(int minY, int maxY)
         {
-            throw new NotImplementedException();
+            this.Y += (directionup ? -1 : 1) * velocity;
+
+            if (this.Y > maxY || this.Y < minY)
+            {
+                directionup = !directionup;
+            }
         }
     }
 }
