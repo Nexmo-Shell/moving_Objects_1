@@ -1,0 +1,24 @@
+﻿<Window x:Name="Moving_Objects" x:Class="moving_Objects_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:moving_Objects_1"
+        mc:Ignorable="d"
+        Title="Moving_Objects" Height="450" Width="800">
+    <Grid Margin="10,0,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="918*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Margin="305,0,0,0" Name ="GamingArea" Background="#F9F2E7" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="1"/>
+        <Button Content="Start/Stop" Name ="StartStop"  HorizontalAlignment="Left" Margin="5,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="StartStop_Click" Visibility="Hidden" Grid.Column="1"/>
+        <Button Content="Step" Name ="Step"  HorizontalAlignment="Left" Margin="238,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="Step_Click" Visibility="Visible" Grid.Column="1"/>
+        <TextBox Name="RadiusEingabe" HorizontalAlignment="Left" Height="20" Margin="30,151,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <TextBox Name="AnzahlEingabe" HorizontalAlignment="Left" Height="20" Margin="30,216,0,0" Text="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <Button Content="Weiter" x:Name ="Next"  HorizontalAlignment="Left" Margin="30,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="Next_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Abbruch" x:Name ="Cancel"  HorizontalAlignment="Left" Margin="68,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.086" Click="StartStop_Click" Grid.Column="1"/>
+        <Label Content="Gebe den Radius in Pixel ein" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Content="Gebe die Anzahl der Elemente ein" HorizontalAlignment="Left" Margin="30,185,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
